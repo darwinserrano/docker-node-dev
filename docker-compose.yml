@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    container_name: node-test
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5000:5000"
+
+# PARA EJECUTAR
+# sudo docker-compose up -d
+
+# Para hacer rebuild
+# sudo docker-compose up -d --build
